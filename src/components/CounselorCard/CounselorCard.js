@@ -1,6 +1,7 @@
 import React from 'react'
 import './CounselorCard.css'
-import { Button, Card, Image, Modal, Input, TextArea, Form } from 'semantic-ui-react'
+import { Button, Card, Image, Modal } from 'semantic-ui-react'
+import { SubmitContainer } from '../../containers'
 
 const CounselorCard = ({ data }) => (
     <Card>
@@ -30,12 +31,7 @@ const CounselorCard = ({ data }) => (
             <Modal trigger={<Button>신청하기</Button>}>
                 <Modal.Header>상담 신청</Modal.Header>
                 <Modal.Content>
-                    <Form>
-                    <Input fluid type='text' placeholder='이름'/><p/>
-                    <Input fluid placeholder='전화번호'/><p/>
-                    <TextArea placeholder='상담 내용'/><p/>
-                    <Button circular icon='check'/>
-                    </Form>
+                    {<SubmitContainer/>}
                 </Modal.Content>
             </Modal>
         </Card.Content>
