@@ -2,16 +2,6 @@ import React from 'react'
 import './CounselorCard.css'
 import { Button, Card, Image, Modal, Input, TextArea, Form } from 'semantic-ui-react'
 
-
-handleChange = (e) => {
-    this.setState({
-        [e.target.name] : e.target.value
-    })
-}
-
-handleSubmit = (e) => {
-    e.preventDefault();
-}
 const CounselorCard = () => (
     <Card>
         <Image
