@@ -1,7 +1,17 @@
 import React from 'react'
 import './CounselorCard.css'
-import { Button, Card, Image, Modal, Header } from 'semantic-ui-react'
+import { Button, Card, Image, Modal, Input, TextArea, Form } from 'semantic-ui-react'
 
+
+handleChange = (e) => {
+    this.setState({
+        [e.target.name] : e.target.value
+    })
+}
+
+handleSubmit = (e) => {
+    e.preventDefault();
+}
 const CounselorCard = () => (
     <Card>
         <Image
@@ -32,9 +42,17 @@ const CounselorCard = () => (
                     </Modal.Description>
                 </Modal.Content>
             </Modal>
-            <Button>
-                신청하기
-            </Button>
+            <Modal trigger={<Button>신청하기</Button>}>
+                <Modal.Header>상담 신청</Modal.Header>
+                <Modal.Content>
+                    <Form>
+                    <Input fluid type='text' placeholder='이름'/><p/>
+                    <Input fluid placeholder='전화번호'/><p/>
+                    <TextArea placeholder='상담 내용'/><p/>
+                    <Button circular icon='check'/>
+                    </Form>
+                </Modal.Content>
+            </Modal>
         </Card.Content>
     </Card>
 )
