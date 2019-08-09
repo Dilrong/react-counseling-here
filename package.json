@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "promise-polyfill": "^8.0.0",
-    "react": "^16.4.2",
+    "react": "^16.9.0",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
